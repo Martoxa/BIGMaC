@@ -1,4 +1,4 @@
-## Minimal packages to install
+## Packages to install
 library(tibble)
 library(dplyr)
 library(parsnip)
