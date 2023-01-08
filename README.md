@@ -12,3 +12,9 @@ BIGMaC<-readRDS(file('BIGMaC.RDS'))
 
 ## Run BIGMaC
 predict(BIGMaC,new_data = NEWDATA)
+
+Cite the code: 
+
+[![DOI](https://zenodo.org/badge/470766120.svg)](https://zenodo.org/badge/latestdoi/470766120)
+
+
