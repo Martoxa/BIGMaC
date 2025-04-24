@@ -8,10 +8,10 @@ To run BIGMaC in new data the names of the GDGTs should be in the format Ia, IIa
 To use the algorithm in new data that has been properly formated, and with the dependencies referenced in the example the algorithm should be run as:
 
 ## Load BIGMaC
-BIGMaC<-readRDS(file('BIGMaC.RDS'))
+load('BIGMaC_0_2.RData')
 
 ## Run BIGMaC
-predict(BIGMaC,new_data = NEWDATA)
+predict(BIGMaC_model,data=bake(trained_recipe,NEWDATA))
 
 Cite the code: 
 
