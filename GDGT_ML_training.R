@@ -116,7 +116,7 @@ nb_spec <-
 ## Tune Hyperparameters ########################################################################################################################
 
 lg_param<-parameters(penalty(),mixture())
-rf_param<-parameters(trees(),min_n(),finalize(mtry(),select(GDGTs_new,-Type)))
+rf_param<-parameters(trees(),min_n(),finalize(mtry(),select(GDGTs,-Type)))
 knn_param<-parameters(neighbors(),weight_func())
 nb_param<-parameters(smoothness(),Laplace())
 
@@ -131,7 +131,7 @@ xgb_grid<- grid_latin_hypercube(
   min_n(),
   loss_reduction(),
   sample_size=sample_prop(),
-  finalize(mtry(),select(GDGTs_new,-Type)),
+  finalize(mtry(),select(GDGTs,-Type)),
   learn_rate(),
   size = 30
 )
@@ -228,7 +228,7 @@ nb_wflow <-
 
 #Get the outputs
 tune_rf<-readRDS('tune_rf_GDGTs.RDS')
-tune_xgb<-readRDS('tune_xgb.RDS')
+tune_xgb<-readRDS('tune_xgb_GDGTs.RDS')
 tune_knn<-readRDS('tune_knn_GDGTs.RDS')
 tune_nb<-readRDS('tune_nb_GDGTs.RDS')
 
