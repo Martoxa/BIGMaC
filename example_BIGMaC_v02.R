@@ -25,6 +25,8 @@ GDGT_Gir<-as_tibble(GFg)
 
 ## Run BIGMaC
 Gir_pre<-predict(BIGMaC_model,data=bake(trained_recipe,GDGT_Gir)) # Predicted environment is stored in Gir_pre
+# This method seems to fix an error that appeared with the previous implementation.
+# I am currently testing if this is a good fix, so both scripts are available.
 
 
 ## Format output
