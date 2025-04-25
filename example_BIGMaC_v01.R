@@ -26,7 +26,9 @@ BIGMaC<-readRDS(file('BIGMaC.RDS'))
 
 ## Run BIGMaC
 Gir_pre<-predict(BIGMaC,new_data = GDGT_Gir) # Predicted environment is stored in Gir_pre
-
+# For now I am leaving this script for archiving purposes. In newer versions of R this line of code
+# appears to produce the following error: Error in if (ordered) "ordered" : argument is of length zero
+# I have temporarily fixed this and the patch is showcased in the file example_BIGMaC_v02.R
 
 ## Format output
 Gir_pre<-as.data.frame(Gir_pre)
